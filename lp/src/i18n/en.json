@@ -250,8 +250,6 @@
     "q1Options": ["Pre-school", "Grades 1-3", "Grades 4-6", "Middle school", "High school+", "Not applicable"],
     "q2": "Do you feel pain around allowance?",
     "q2Options": ["Yes, a lot", "Somewhat", "Not really"],
-    "q3": "Preferred update channel (optional)",
-    "q3Options": ["X", "LINE", "No updates needed"],
     "submit": "Done",
     "note": "For now, we only track interest."
   },

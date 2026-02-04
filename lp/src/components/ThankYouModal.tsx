@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { track } from '@vercel/analytics';
 import type { Dictionary } from '@/i18n';
 
 interface ThankYouModalProps {
@@ -19,14 +18,12 @@ export default function ThankYouModal({
   const [interestReasons, setInterestReasons] = useState<string[]>([]);
   const [ageRange, setAgeRange] = useState('');
   const [painLevel, setPainLevel] = useState('');
-  const [contactPref, setContactPref] = useState('');
 
   const resetState = () => {
     setSubmitted(false);
     setInterestReasons([]);
     setAgeRange('');
     setPainLevel('');
-    setContactPref('');
   };
 
   const handleClose = () => {
@@ -139,35 +136,27 @@ export default function ThankYouModal({
                     ))}
                   </div>
                 </div>
-                <div>
-                  <div className="text-sm font-semibold text-slate-700 mb-2">
-                    {dict.modal.q3}
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {dict.modal.q3Options.map((option) => (
-                      <button
-                        key={option}
-                        onClick={() => setContactPref(option)}
-                        className={`px-3 py-2 rounded-full text-sm border ${
-                          contactPref === option
-                            ? 'bg-teal-700 text-white border-teal-700'
-                            : 'bg-white text-slate-600 border-slate-200'
-                        }`}
-                      >
-                        {option}
-                      </button>
-                    ))}
-                  </div>
-                </div>
               </div>
               <button
-                onClick={() => {
-                  track('survey_submit', {
-                    interestReasons: interestReasons.join(', '),
-                    ageRange: ageRange || 'not_selected',
-                    painLevel: painLevel || 'not_selected',
-                    contactPref: contactPref || 'not_selected',
-                  });
+                onClick={async () => {
+                  const webhookUrl = process.env.NEXT_PUBLIC_SURVEY_WEBHOOK_URL;
+                  if (webhookUrl) {
+                    try {
+                      await fetch(webhookUrl, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          timestamp: new Date().toISOString(),
+                          interestReasons: interestReasons.join(', '),
+                          ageRange: ageRange || '',
+                          painLevel: painLevel || '',
+                        }),
+                      });
+                    } catch (e) {
+                      console.error('Survey submission failed:', e);
+                    }
+                  }
                   setSubmitted(true);
                 }}
                 className="mt-6 w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg transition-colors"
