@@ -8,6 +8,8 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Problem from '@/components/Problem';
 import Solution from '@/components/Solution';
+import Comparison from '@/components/Comparison';
+import Simulator from '@/components/Simulator';
 import Capabilities from '@/components/Capabilities';
 import TargetFit from '@/components/TargetFit';
 import HowItWorks from '@/components/HowItWorks';
@@ -44,6 +46,8 @@ export default function HomePage() {
         />
         <Problem dict={dict} />
         <Solution dict={dict} />
+        <Comparison dict={dict} />
+        <Simulator dict={dict} locale={locale as Locale} />
         <Capabilities dict={dict} />
         <TargetFit dict={dict} />
         <HowItWorks dict={dict} />

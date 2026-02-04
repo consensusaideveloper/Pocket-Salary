@@ -48,8 +48,8 @@
       "familyLabel": "家族まとめ",
       "familyValue": "今月の流れ",
       "children": [
-        { "name": "はる", "hand": "手元 ¥8,500", "parent": "親預かり ¥20,000" },
-        { "name": "ゆい", "hand": "手元 ¥6,200", "parent": "親預かり ¥12,000" }
+        { "name": "子1", "hand": "手元 ¥8,500", "parent": "親預かり ¥20,000" },
+        { "name": "子2", "hand": "手元 ¥6,200", "parent": "親預かり ¥12,000" }
       ],
       "quickSummary": ["やることが見える", "親子で合意しやすい"],
       "recentTitle": "最近の動き",
@@ -142,6 +142,72 @@
       "「うちのルール」が先に決まる",
       "子どもが自分で考える時間が増える",
       "お金の話が“作戦会議”になる"
+    ]
+  },
+  "comparison": {
+    "title": "月額お小遣い vs 年俸制",
+    "subtitle": "「揉める理由」と「解決の理由」を見える化します。",
+    "monthlyTitle": "月額お小遣い",
+    "monthlyItems": [
+      "今月分を使い切る発想になりやすい",
+      "その場判断が増えて揉めがち",
+      "長期の計画が立ちにくい"
+    ],
+    "annualTitle": "年俸制お小遣い",
+    "annualItems": [
+      "年の枠で配分するので判断が育つ",
+      "ルールが先に決まって揉めにくい",
+      "失敗も設計内で回復しやすい"
+    ],
+    "note": "記録だけでなく「親子で合意したルール」と「回復手段」があることが違いです。"
+  },
+  "simulator": {
+    "title": "うちの場合、どうなる？",
+    "subtitle": "年齢と月額から年俸のイメージを作ります。",
+    "ageLabel": "お子さまの年齢",
+    "monthlyLabel": "今の月額お小遣い（目安）",
+    "annualLabel": "年俸の目安",
+    "rangeLabel": "年齢の目安レンジ",
+    "statusEmpty": "入力すると目安が見えます",
+    "statusLow": "目安より少なめです",
+    "statusHigh": "目安より多めです",
+    "statusInRange": "目安の範囲内です",
+    "scopeTitle": "裁量支出の範囲（例）",
+    "parentPaysTitle": "親が負担するもの",
+    "childPaysTitle": "子どもが使うもの",
+    "parentPaysItems": ["学校指定品", "成長起因の買い替え"],
+    "childPaysItems": ["私服", "文房具", "娯楽・趣味"],
+    "note": "境界が曖昧なものは、家庭ルールとして事前に合意します。",
+    "defaultMonthly": 2000,
+    "ageOptions": [
+      {
+        "key": "lower",
+        "label": "小学校低学年",
+        "minAnnual": 6000,
+        "maxAnnual": 12000,
+        "scope": ["おやつ", "小物", "かんたんな娯楽"]
+      },
+      {
+        "key": "upper",
+        "label": "小学校高学年",
+        "minAnnual": 12000,
+        "maxAnnual": 36000,
+        "scope": ["娯楽", "私物", "一部文房具"]
+      },
+      {
+        "key": "middle",
+        "label": "中学生",
+        "minAnnual": 60000,
+        "maxAnnual": 100000,
+        "scope": ["娯楽", "私服", "交際費"]
+      },
+      {
+        "key": "high",
+        "label": "高校生",
+        "minAnnual": 80000,
+        "maxAnnual": 150000,
+        "scope": ["娯楽", "私服", "昼食", "一部生活費"]
+      }
     ]
   },
   "howItWorks": {

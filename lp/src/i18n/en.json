@@ -48,8 +48,8 @@
       "familyLabel": "Family",
       "familyValue": "This month",
       "children": [
-        { "name": "Haru", "hand": "Available $85", "parent": "Parent-held $200" },
-        { "name": "Yui", "hand": "Available $62", "parent": "Parent-held $120" }
+        { "name": "Kid 1", "hand": "Available $85", "parent": "Parent-held $200" },
+        { "name": "Kid 2", "hand": "Available $62", "parent": "Parent-held $120" }
       ],
       "quickSummary": ["Clear next steps", "Easier family agreement"],
       "recentTitle": "Recent activity",
@@ -142,6 +142,72 @@
       "One shared rule replaces endless decisions",
       "Kids practice making choices",
       "Money talks become calmer"
+    ]
+  },
+  "comparison": {
+    "title": "Monthly vs Annual Allowance",
+    "subtitle": "Why the yearly system reduces friction.",
+    "monthlyTitle": "Monthly allowance",
+    "monthlyItems": [
+      "Encourages “use it this month” thinking",
+      "More in‑the‑moment negotiations",
+      "Harder to plan long term"
+    ],
+    "annualTitle": "Annual allowance",
+    "annualItems": [
+      "Teaches planning across a whole year",
+      "Rules are agreed up front",
+      "Recovery options are part of the system"
+    ],
+    "note": "The difference is shared rules plus recovery options — not just tracking."
+  },
+  "simulator": {
+    "title": "What about your family?",
+    "subtitle": "Use age and monthly allowance to picture a yearly plan.",
+    "ageLabel": "Child age",
+    "monthlyLabel": "Current monthly allowance (estimate)",
+    "annualLabel": "Yearly amount",
+    "rangeLabel": "Typical range by age",
+    "statusEmpty": "Enter an amount to see the range",
+    "statusLow": "Below the typical range",
+    "statusHigh": "Above the typical range",
+    "statusInRange": "Within the typical range",
+    "scopeTitle": "Discretionary scope (examples)",
+    "parentPaysTitle": "Parent pays",
+    "childPaysTitle": "Kid pays",
+    "parentPaysItems": ["School‑required items", "Growth‑related replacements"],
+    "childPaysItems": ["Clothes", "Stationery", "Hobbies"],
+    "note": "If a boundary is unclear, agree on a family rule in advance.",
+    "defaultMonthly": 20,
+    "ageOptions": [
+      {
+        "key": "lower",
+        "label": "Grades 1–3",
+        "minAnnual": 60,
+        "maxAnnual": 120,
+        "scope": ["Snacks", "Small items", "Simple fun"]
+      },
+      {
+        "key": "upper",
+        "label": "Grades 4–6",
+        "minAnnual": 120,
+        "maxAnnual": 360,
+        "scope": ["Fun", "Personal items", "Some stationery"]
+      },
+      {
+        "key": "middle",
+        "label": "Middle school",
+        "minAnnual": 600,
+        "maxAnnual": 1000,
+        "scope": ["Fun", "Clothes", "Social spending"]
+      },
+      {
+        "key": "high",
+        "label": "High school",
+        "minAnnual": 800,
+        "maxAnnual": 1500,
+        "scope": ["Fun", "Clothes", "Lunch", "Some living costs"]
+      }
     ]
   },
   "howItWorks": {
