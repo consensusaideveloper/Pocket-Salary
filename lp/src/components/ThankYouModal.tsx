@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { Dictionary } from '@/i18n';
+import jaDict from '@/i18n/ja.json';
 
 interface ThankYouModalProps {
   dict: Dictionary;
@@ -15,15 +16,15 @@ export default function ThankYouModal({
   onClose,
 }: ThankYouModalProps) {
   const [submitted, setSubmitted] = useState(false);
-  const [interestReasons, setInterestReasons] = useState<string[]>([]);
-  const [ageRange, setAgeRange] = useState('');
-  const [painLevel, setPainLevel] = useState('');
+  const [selectedInterestIndices, setSelectedInterestIndices] = useState<number[]>([]);
+  const [selectedAgeIndex, setSelectedAgeIndex] = useState<number | null>(null);
+  const [selectedPainIndex, setSelectedPainIndex] = useState<number | null>(null);
 
   const resetState = () => {
     setSubmitted(false);
-    setInterestReasons([]);
-    setAgeRange('');
-    setPainLevel('');
+    setSelectedInterestIndices([]);
+    setSelectedAgeIndex(null);
+    setSelectedPainIndex(null);
   };
 
   const handleClose = () => {
@@ -75,18 +76,18 @@ export default function ThankYouModal({
                     {dict.modal.q0Hint}
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {dict.modal.q0Options.map((option) => (
+                    {dict.modal.q0Options.map((option, index) => (
                       <button
                         key={option}
                         onClick={() => {
-                          setInterestReasons((prev) =>
-                            prev.includes(option)
-                              ? prev.filter((item) => item !== option)
-                              : [...prev, option]
+                          setSelectedInterestIndices((prev) =>
+                            prev.includes(index)
+                              ? prev.filter((i) => i !== index)
+                              : [...prev, index]
                           );
                         }}
                         className={`px-3 py-2 rounded-full text-sm border ${
-                          interestReasons.includes(option)
+                          selectedInterestIndices.includes(index)
                             ? 'bg-teal-700 text-white border-teal-700'
                             : 'bg-white text-slate-600 border-slate-200'
                         }`}
@@ -101,12 +102,12 @@ export default function ThankYouModal({
                     {dict.modal.q1}
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {dict.modal.q1Options.map((option) => (
+                    {dict.modal.q1Options.map((option, index) => (
                       <button
                         key={option}
-                        onClick={() => setAgeRange(option)}
+                        onClick={() => setSelectedAgeIndex(index)}
                         className={`px-3 py-2 rounded-full text-sm border ${
-                          ageRange === option
+                          selectedAgeIndex === index
                             ? 'bg-teal-700 text-white border-teal-700'
                             : 'bg-white text-slate-600 border-slate-200'
                         }`}
@@ -121,12 +122,12 @@ export default function ThankYouModal({
                     {dict.modal.q2}
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {dict.modal.q2Options.map((option) => (
+                    {dict.modal.q2Options.map((option, index) => (
                       <button
                         key={option}
-                        onClick={() => setPainLevel(option)}
+                        onClick={() => setSelectedPainIndex(index)}
                         className={`px-3 py-2 rounded-full text-sm border ${
-                          painLevel === option
+                          selectedPainIndex === index
                             ? 'bg-teal-700 text-white border-teal-700'
                             : 'bg-white text-slate-600 border-slate-200'
                         }`}
@@ -142,15 +143,25 @@ export default function ThankYouModal({
                   const webhookUrl = process.env.NEXT_PUBLIC_SURVEY_WEBHOOK_URL;
                   if (webhookUrl) {
                     try {
+                      const jaInterestReasons = selectedInterestIndices
+                        .map((i) => jaDict.modal.q0Options[i])
+                        .join(', ');
+                      const jaAgeRange = selectedAgeIndex !== null
+                        ? jaDict.modal.q1Options[selectedAgeIndex]
+                        : '';
+                      const jaPainLevel = selectedPainIndex !== null
+                        ? jaDict.modal.q2Options[selectedPainIndex]
+                        : '';
+
                       await fetch(webhookUrl, {
                         method: 'POST',
                         mode: 'no-cors',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                           timestamp: new Date().toISOString(),
-                          interestReasons: interestReasons.join(', '),
-                          ageRange: ageRange || '',
-                          painLevel: painLevel || '',
+                          interestReasons: jaInterestReasons,
+                          ageRange: jaAgeRange,
+                          painLevel: jaPainLevel,
                         }),
                       });
                     } catch (e) {
