@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "title": "Pocket Salary - Build a yearly allowance system",
+    "description": "Tired of random allowance decisions? Build a simple yearly system for your family."
+  },
+  "header": {
+    "logo": "Pocket Salary",
+    "cta": "Show Interest",
+    "kids": "For Kids"
+  },
+  "hero": {
+    "headline": "Tired of allowance negotiations?",
+    "headlineSub": "Build a simple yearly system.",
+    "subheadline": "Agree on one yearly allowance and let kids practice choosing. The system matters more than the app right now.",
+    "cta": "I'm Curious",
+    "badge": "One click is enough",
+    "subNote": "30 seconds",
+    "childNote": "If your child asks for a yearly allowance, this gives you a simple way to agree on rules together.",
+    "pills": [
+      {
+        "title": "Set the yearly frame",
+        "description": "Decisions are easier when the budget is clear."
+      },
+      {
+        "title": "Agree once, less friction",
+        "description": "Fewer daily negotiations, more calm."
+      },
+      {
+        "title": "Practice choosing",
+        "description": "Focus on decisions, not just saving."
+      },
+      {
+        "title": "Mistakes are okay",
+        "description": "Run out? Learn to recover together."
+      }
+    ]
+  },
+  "heroMock": {
+    "tabs": {
+      "parent": "Parent view",
+      "child": "Kid view"
+    },
+    "toggleHint": "Tap a tab to switch views",
+    "badge": "Friendly preview",
+    "parent": {
+      "title": "Parent overview",
+      "tag": "Family snapshot",
+      "familyLabel": "Family",
+      "familyValue": "This month",
+      "children": [
+        { "name": "Haru", "hand": "Available $85", "parent": "Parent-held $200" },
+        { "name": "Yui", "hand": "Available $62", "parent": "Parent-held $120" }
+      ],
+      "quickSummary": ["Clear next steps", "Easier family agreement"],
+      "recentTitle": "Recent activity",
+      "recent": [
+        { "label": "Allowance payment", "amount": "+$30" },
+        { "label": "Uniform (parent)", "amount": "-$50" },
+        { "label": "Snacks (kid)", "amount": "-$4.5" }
+      ],
+      "chips": [
+        { "label": "Rules", "value": "Allowance & rates" },
+        { "label": "Review", "value": "Monthly check-in" }
+      ],
+      "actionsTitle": "What you can do",
+      "actionsHint": "Tap a button to see an example",
+      "actions": [
+        {
+          "key": "rules",
+          "label": "Set rules",
+          "panelTitle": "Allowance & rates",
+          "panelBody": "Annual $360 / Interest 5% / Must‑pay=parent, discretionary=kid",
+          "panelCta": "Save"
+        },
+        {
+          "key": "review",
+          "label": "Review",
+          "panelTitle": "This month’s review",
+          "panelBody": "Check spending and plan the next month.",
+          "panelCta": "Leave a note",
+          "notePlaceholder": "Quick note for this month",
+          "savedText": "Note saved"
+        }
+      ]
+    },
+    "child": {
+      "title": "Kid home",
+      "tag": "My balance",
+      "annualLabel": "Yearly limit",
+      "annualValue": "$360",
+      "remainingLabel": "Left",
+      "remainingValue": "$285",
+      "handLabel": "To spend",
+      "handValue": "$85",
+      "parentLabel": "Saved",
+      "parentValue": "$200",
+      "quickSummary": ["I decide", "I log it"],
+      "recentTitle": "Recent activity",
+      "recent": [
+        { "label": "Gig reward", "amount": "+$5" },
+        { "label": "Snacks (discretionary)", "amount": "-$4.5" },
+        { "label": "Stationery (discretionary)", "amount": "-$12" }
+      ],
+      "chips": [
+        { "label": "Family bank", "value": "+5% interest" },
+        { "label": "Spend log", "value": "Quick add" }
+      ],
+      "actionsTitle": "Try it",
+      "actionsHint": "Tap a button to try",
+      "actions": [
+        {
+          "key": "spend",
+          "label": "I spent",
+          "panelTitle": "Quick note",
+          "panelBody": "Category: snacks (discretionary) / Amount: $3",
+          "panelCta": "Done!",
+          "demoLabel": "Snacks",
+          "demoAmount": "-$3",
+          "savedText": "Saved!"
+        },
+        {
+          "key": "deposit",
+          "label": "Save it",
+          "panelTitle": "Family bank",
+          "panelBody": "Save $5 to earn +5% interest.",
+          "panelCta": "Save"
+        }
+      ]
+    }
+  },
+  "problem": {
+    "title": "Does this sound familiar?",
+    "items": [
+      "Giving allowance without a clear system",
+      "Constant \"Can I buy this?\" negotiations",
+      "Money talks turning into family conflicts"
+    ]
+  },
+  "solution": {
+    "title": "A yearly allowance changes the vibe",
+    "items": [
+      "One shared rule replaces endless decisions",
+      "Kids practice making choices",
+      "Money talks become calmer"
+    ]
+  },
+  "howItWorks": {
+    "title": "Just three steps",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Set the yearly amount",
+        "description": "Decide a simple yearly allowance together."
+      },
+      {
+        "number": "2",
+        "title": "Track the basics",
+        "description": "A quick note when spending is enough."
+      },
+      {
+        "number": "3",
+        "title": "Review once a month",
+        "description": "No judging. Just a short check-in."
+      }
+    ]
+  },
+  "features": {
+    "title": "What's inside the system",
+    "subtitle": "Simple pieces you can actually keep up with.",
+    "items": [
+      {
+        "title": "Yearly budget guide",
+        "description": "Age-based hints and a simple rule template."
+      },
+      {
+        "title": "Save-and-grow rules",
+        "description": "A gentle way to learn saving with small rewards."
+      },
+      {
+        "title": "Earn by helping",
+        "description": "Simple task-based rewards that feel fair."
+      },
+      {
+        "title": "Year-end review",
+        "description": "Look back and make next year easier."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "What this system lets you do",
+    "subtitle": "Here’s a short list of what you can do.",
+    "items": [
+      {
+        "title": "Agree on the yearly rules",
+        "description": "Define must‑pay vs discretionary and expand the range as kids grow."
+      },
+      {
+        "title": "Track spending and balances",
+        "description": "Record spending and see available and parent-held balances."
+      },
+      {
+        "title": "Experience saving growth",
+        "description": "Use a family bank with simple interest to learn saving."
+      },
+      {
+        "title": "Experience earning",
+        "description": "Task-based family gigs with clear outcomes and rewards."
+      },
+      {
+        "title": "Review and recovery rules",
+        "description": "Monthly/yearly reviews and ways to recover if funds run out."
+      }
+    ]
+  },
+  "targetFit": {
+    "title": "Is this for you?",
+    "subtitle": "A quick check before you click.",
+    "forTitle": "A good fit if you",
+    "forItems": [
+      "Feel allowance rules change every time",
+      "Want better money conversations at home",
+      "Want kids to practice responsibility"
+    ],
+    "notTitle": "Not ideal if you need",
+    "notItems": [
+      "Parents to control every money decision",
+      "Short-term results over long-term learning",
+      "A strict monitoring tool"
+    ],
+    "noteTitle": "The point is the system",
+    "noteBody": "It helps families agree on how to decide. If demand is real, we'll consider an app.",
+    "disclaimer": "This is not a financial service. It's a framework for managing family allowances. Terms like \"Family Bank\" refer to simulated family agreements, not actual banking."
+  },
+  "cta": {
+    "title": "Want to try this?",
+    "badge": "One click is enough",
+    "description": "We're testing demand. After clicking, answer one quick question.",
+    "button": "I'm Curious",
+    "note": "For now, we just want to know if you're interested."
+  },
+  "modal": {
+    "title": "30 seconds, promise",
+    "description": "Just tell us what caught your interest.",
+    "successTitle": "Thank you!",
+    "successDescription": "This helps us validate demand.",
+    "q0": "What caught your interest?",
+    "q0Hint": "Select all that apply",
+    "q0Options": ["Annual allowance system", "Parent-child rules", "Teaching decision-making", "Just curious"],
+    "q1": "Child age (optional)",
+    "q1Options": ["Pre-school", "Grades 1-3", "Grades 4-6", "Middle school", "High school+", "Not applicable"],
+    "q2": "Do you feel pain around allowance?",
+    "q2Options": ["Yes, a lot", "Somewhat", "Not really"],
+    "q3": "Preferred update channel (optional)",
+    "q3Options": ["X", "LINE", "No updates needed"],
+    "submit": "Done",
+    "note": "For now, we only track interest."
+  },
+  "footer": {
+    "copyright": "© 2026 Pocket Salary. All rights reserved."
+  },
+  "faq": {
+    "title": "Common Questions",
+    "subtitle": "Here are answers to what you might be wondering.",
+    "items": [
+      {
+        "question": "Does the child pay for school essentials too?",
+        "answer": "No. \"Essential expenses\" like uniforms and school-required items are covered by parents. Kids only manage \"discretionary spending\" from their allowance—things like casual clothes, stationery, hobbies, snacks, and friend activities. For anything unclear, decide together in advance."
+      },
+      {
+        "question": "What if they run out of money?",
+        "answer": "No emotional top-ups. Instead, they choose from pre-agreed recovery options: earn through family gigs, borrow from next year's allowance, or give up interest. Essential needs are always covered by parents, so life won't fall apart."
+      },
+      {
+        "question": "Isn't it harsh if they fail?",
+        "answer": "In this system, running out isn't a failure to avoid—it's a designed learning moment. Instead of blame, you discuss what to do next. Mistakes become material for growth, not punishment."
+      },
+      {
+        "question": "Won't parents over-monitor?",
+        "answer": "Parents act as \"rule designers and auditors,\" not surveillance. You don't micromanage daily choices—just review together once a month. Visibility isn't for control; it's for conversation."
+      },
+      {
+        "question": "Does this bribe kids with money for chores?",
+        "answer": "Daily chores (cleaning, laundry, etc.) don't earn money. Family gigs only pay when there's a clear outcome and value delivered. The goal isn't the money—it's understanding the link between value and reward."
+      },
+      {
+        "question": "Is the amount normal compared to other families?",
+        "answer": "We don't compare across families. The allowance depends on your values and situation. What matters isn't the number—it's building better judgment over time."
+      }
+    ]
+  },
+  "kids": {
+    "badge": "For Kids",
+    "backLink": "← Back to parents",
+    "title": "For Kids: Want to decide how you use your allowance?",
+    "subtitle": "This page is for kids. Annual allowance means you plan a whole year. You agree on rules with your parents, then spend on your own timeline.",
+    "cards": [
+      {
+        "title": "You decide",
+        "description": "Practice choosing what to spend on and why."
+      },
+      {
+        "title": "Rules make it fair",
+        "description": "Agree first so you don't have to negotiate every time."
+      },
+      {
+        "title": "Mistakes are okay",
+        "description": "If you run out, you learn how to recover together."
+      },
+      {
+        "title": "Build money skills",
+        "description": "Save, spend, earn, and review your choices."
+      }
+    ],
+    "howTitle": "How to ask your parents",
+    "howSteps": [
+      "Say you want to try a yearly allowance",
+      "Suggest starting with a small amount",
+      "Ask to decide the rules together"
+    ]
+  }
+}
